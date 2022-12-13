@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">             
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark ">
+    <div class="container-fluid Nav">
+      <a class="navbar-brand" href="#">
+        <img src="../static/tourist-bus.png" alt="" width="60" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="./ticket">Ticket</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="./update">Update Ticket</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="./delete">Delete ticket</a>
+          </li>
+            <li class="nav-item">
+              <form  class="front" action="/view" method="POST">
+                <div class="query">
+                <button type="submit" class="btn btn-danger">View Ticket Detail</button>
+                </div>
+              </form>
+          </li>
+        </ul>
+        </div>
+    </div>
+  </nav>
+  <div class="header"> 
+    <form class="main" action="/insert" method="POST">
+      p Ticket  
+      <div class="mainheader">
+        <input type="int" name="t_id" placeholder="Ticket Id">
+      <input type="text" name="t_date" placeholder="Ticket date">
+      <input type="int" name="t_amount" placeholder="Ticket amount">
+      <input type="int" name="p_id" placeholder="passanger Id">
+      <button type="submit" class=" button btn btn-success">Insert</button>
+      </div>
+
+    </form>
+  </div>  
+  <script src="backned.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+
+</html>
